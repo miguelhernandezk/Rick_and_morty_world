@@ -16,15 +16,24 @@ const fetchData = async (url) => {
             // Create name
             const name = document.createElement("h2");
             name.textContent = item.name;
+            name.className = "text-2xl"
+
+            // Create status
+            const status = document.createElement("span");
+            status.textContent = item.status;
 
 
             // Create species
             const species = document.createElement("div");
             species.textContent = item.species;
+
+            // Create character origin
+            const origin_name = document.createElement("div");
+            origin_name.textContent = item.origin["name"];
             
             const container = document.createElement("div");
-            container.append(image, name, species);
-            container.className = "rounded-xl bg-gray-700 my-4"
+            container.append(image, name, status, species, origin_name);
+            container.className = "rounded-xl bg-gray-700 my-4 overflow-hidden text-white"
 
             allItems.push(container); 
         });
