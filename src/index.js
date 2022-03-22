@@ -24,11 +24,11 @@ const fetchData = async (url) => {
             
             const container = document.createElement("div");
             container.append(image, name, species);
-            container.className = "rounded-xl bg-gray-700"
+            container.className = "rounded-xl bg-gray-700 my-4"
 
             allItems.push(container); 
         });
-        appNode.className = "grid grid-cols-3";
+        appNode.className = "flex flex-col";
         appNode.append(...allItems);
     }
     catch(error){
