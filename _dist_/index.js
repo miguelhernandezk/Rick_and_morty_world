@@ -1,4 +1,5 @@
-const baseUrl =  "https://rickandmortyapi.com/api/character"
+const random = require("../random");
+const baseUrl =  "https://rickandmortyapi.com/api/character?page=1"
 const appNode = document.querySelector("#app")
 
 const fetchData = async (url) => {
@@ -16,24 +17,50 @@ const fetchData = async (url) => {
             // Create name
             const name = document.createElement("h2");
             name.textContent = item.name;
-            name.className = "text-2xl"
+            name.className = "text-2xl w-full";
 
             // Create status
+            const status_indicator = document.createElement("div");
             const status = document.createElement("span");
             status.textContent = item.status;
+            switch (status.textContent){
+                case "Alive":
+                    status_indicator.className = "w-2 h-2 bg-green-300 rounded-full";
+                    break;
+                case "Dead":
+                    status_indicator.className = "w-2 h-2 bg-red-500 rounded-full";
+                    break;
+                default:
+                    status_indicator.className = "w-2 h-2 bg-yellow-500 rounded-full";
+            }
 
 
             // Create species
-            const species = document.createElement("div");
+            const species = document.createElement("span");
             species.textContent = item.species;
 
+            const mix_species_status = document.createElement("span");
+            mix_species_status.textContent = `${status.textContent} - ${species.textContent}`;
+            mix_species_status.className = "mx-1";
+
+            const status_container = document.createElement("div");
+            status_container.className = "flex w-full centering-items";
+            status_container.append(status_indicator, mix_species_status);
+
             // Create character origin
+            const origin_name_label = document.createElement("div");
+            origin_name_label.className = "text-gray-400 text-sm"
+            origin_name_label.textContent = "Origin: ";
             const origin_name = document.createElement("div");
             origin_name.textContent = item.origin["name"];
+
+            const info_container = document.createElement("div");
+            info_container.append(name, status_container, origin_name_label, origin_name);
+            //info_container.className = "flex";
             
             const container = document.createElement("div");
-            container.append(image, name, status, species, origin_name);
-            container.className = "rounded-xl bg-gray-700 my-4 overflow-hidden text-white"
+            container.append(image, info_container);
+            container.className = "rounded-xl bg-gray-700 my-4 overflow-hidden text-white";
 
             allItems.push(container); 
         });
