@@ -1,5 +1,6 @@
-const random = require("../random");
-const baseUrl =  "https://rickandmortyapi.com/api/character?page=1"
+import { registerImage } from "./lazy_loading.js"
+import random from "./random_images.js"
+const baseUrl =  `https://rickandmortyapi.com/api/character?page=${random()}`
 const appNode = document.querySelector("#app")
 
 const fetchData = async (url) => {
