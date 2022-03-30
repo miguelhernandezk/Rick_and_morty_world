@@ -3,6 +3,25 @@ import random from "./random_images.js"
 const baseUrl =  `https://rickandmortyapi.com/api/character?page=${random()}`
 const appNode = document.querySelector("#app")
 
+const createImageNode = (image_url) => {
+    const container = document.createElement("div");
+
+    const image = document.createElement("img");
+    image.width = "300";
+    image.dataset.src = image_url;  
+
+    container.appendChild(image);
+
+    return container;
+};
+
+const addImage = (image_url) => {
+    const newImage = createImageNode(image_url);
+    registerImage(newImage);
+    return newImage;
+};
+
+
 const fetchData = async (url) => {
     const allItems = [];
     try{
@@ -11,9 +30,9 @@ const fetchData = async (url) => {
         console.log(data);
         data.results.forEach(item => {
             // Create image
-            const image = document.createElement("img");
-            image.src = item.image;
-
+            //const image = document.createElement("img");
+            //image.src = item.image;
+            const image = addImage(item.image);
 
             // Create name
             const name = document.createElement("h2");
