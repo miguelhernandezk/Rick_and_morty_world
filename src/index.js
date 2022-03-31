@@ -5,7 +5,7 @@ const appNode = document.querySelector("#app")
 
 const createImageNode = (image_url) => {
     const container = document.createElement("div");
-    container.className = "rounded-xl overflow-hidden w-full mx-auto max-w-sm max-h-64";
+    container.className = "rounded-xl overflow-hidden w-full mx-auto max-w-sm max-h-64 sm:w-64 sm:m-0";
 
     const image = document.createElement("img");
     //image.width = "100";
@@ -78,15 +78,16 @@ const fetchData = async (url) => {
 
             const info_container = document.createElement("div");
             info_container.append(name, status_container, origin_name_label, origin_name);
+            info_container.className = "p-8 flex flex-col justify-center";
             //info_container.className = "flex";
             
             const container = document.createElement("div");
             container.append(image, info_container);
-            container.className = "rounded-xl bg-gray-700 my-4 overflow-hidden text-white w-11/12 mx-auto";
+            container.className = "rounded-xl bg-gray-700 my-4 overflow-hidden text-white w-11/12 mx-auto sm:flex sm:flex-row md:w-2/5 lg:mx-16";
 
             allItems.push(container); 
         });
-        appNode.className = "flex flex-col";
+        appNode.className = "flex flex-col lg:flex-row lg:flex-wrap";
         appNode.append(...allItems);
     }
     catch(error){
