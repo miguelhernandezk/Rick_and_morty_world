@@ -5,9 +5,11 @@ const appNode = document.querySelector("#app")
 
 const createImageNode = (image_url) => {
     const container = document.createElement("div");
+    container.className = "rounded-xl overflow-hidden w-full mx-auto max-w-sm max-h-64";
 
     const image = document.createElement("img");
-    image.width = "300";
+    //image.width = "100";
+    image.className = "w-full max-w-sm";
     image.dataset.src = image_url;  
 
     container.appendChild(image);
@@ -80,7 +82,7 @@ const fetchData = async (url) => {
             
             const container = document.createElement("div");
             container.append(image, info_container);
-            container.className = "rounded-xl bg-gray-700 my-4 overflow-hidden text-white";
+            container.className = "rounded-xl bg-gray-700 my-4 overflow-hidden text-white w-11/12 mx-auto";
 
             allItems.push(container); 
         });
