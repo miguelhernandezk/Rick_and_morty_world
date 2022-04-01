@@ -78,16 +78,16 @@ const fetchData = async (url) => {
 
             const info_container = document.createElement("div");
             info_container.append(name, status_container, origin_name_label, origin_name);
-            info_container.className = "p-8 flex flex-col justify-center";
+            info_container.className = "p-8 flex flex-col justify-center content-center mx-auto";
             //info_container.className = "flex";
             
             const container = document.createElement("div");
             container.append(image, info_container);
-            container.className = "rounded-xl bg-gray-700 my-4 overflow-hidden text-white w-11/12 mx-auto sm:flex sm:flex-row md:w-2/5 lg:mx-16";
+            container.className = "card rounded-xl bg-gray-700 my-4 overflow-hidden text-white w-11/12 max-w-xl mx-auto sm:flex sm:flex-row md:w-2/5 md:mx-8";
 
-            allItems.push(container); 
+            allItems.push(container);
         });
-        appNode.className = "flex flex-col lg:flex-row lg:flex-wrap";
+        appNode.className = "flex flex-col md:flex-row md:flex-wrap md:justify-center";
         appNode.append(...allItems);
     }
     catch(error){
