@@ -1,6 +1,6 @@
 import { registerImage } from "./lazy_loading.js"
 import random from "./random_images.js"
-const baseUrl =  `https://rickandmortyapi.com/api/character?page=${random()}`
+const baseUrl =  "https://rickandmortyapi.com/api/character?page="
 const appNode = document.querySelector("#app")
 
 const createImageNode = (image_url) => {
@@ -87,12 +87,22 @@ const fetchData = async (url) => {
 
             allItems.push(container);
         });
-        appNode.className = "flex flex-col md:flex-row md:flex-wrap md:justify-center";
-        appNode.append(...allItems);
+        const main_container = document.createElement("main");
+        main_container.append(...allItems);
+        main_container.className = "flex flex-col md:flex-row md:flex-wrap md:justify-center";
+        appNode.append(main_container);
     }
     catch(error){
         console.error(error);
     }
 }
 
-fetchData(baseUrl);
+const reload = () => {
+    document.querySelector("#app").removeChild(document.querySelector("main"));
+    fetchData(`${baseUrl}${random()}`);    
+}
+
+const reloadButton = document.querySelector("button");
+reloadButton.addEventListener("click", reload);
+
+fetchData(`${baseUrl}${random()}`);

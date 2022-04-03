@@ -6,3 +6,29 @@
     justify-content: center;
     align-items: center;
 }
+
+.socialMediaContainer{
+    width: 30%;
+}
+
+.myMediaList{
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+a{
+    color: white;
+}
+
+.myMediaList a:hover{
+    color: rgb(233,69,117);
+}
+
+.aboutMeContainer{
+    width: 50%;
+}
+
+.aboutMeContainer a:hover{
+    color: rgb(233,69,117);
+}
