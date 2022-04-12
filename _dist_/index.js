@@ -1,6 +1,28 @@
-const random = require("../random");
-const baseUrl =  "https://rickandmortyapi.com/api/character?page=1"
+import { registerImage } from "./lazy_loading.js"
+import random from "./random_images.js"
+const baseUrl =  "https://rickandmortyapi.com/api/character?page="
 const appNode = document.querySelector("#app")
+
+const createImageNode = (image_url) => {
+    const container = document.createElement("div");
+    container.className = "rounded-xl overflow-hidden w-full mx-auto max-w-sm max-h-64 sm:w-64 sm:m-0";
+
+    const image = document.createElement("img");
+    //image.width = "100";
+    image.className = "w-full max-w-sm";
+    image.dataset.src = image_url;  
+
+    container.appendChild(image);
+
+    return container;
+};
+
+const addImage = (image_url) => {
+    const newImage = createImageNode(image_url);
+    registerImage(newImage);
+    return newImage;
+};
+
 
 const fetchData = async (url) => {
     const allItems = [];
@@ -10,9 +32,9 @@ const fetchData = async (url) => {
         console.log(data);
         data.results.forEach(item => {
             // Create image
-            const image = document.createElement("img");
-            image.src = item.image;
-
+            //const image = document.createElement("img");
+            //image.src = item.image;
+            const image = addImage(item.image);
 
             // Create name
             const name = document.createElement("h2");
@@ -56,20 +78,31 @@ const fetchData = async (url) => {
 
             const info_container = document.createElement("div");
             info_container.append(name, status_container, origin_name_label, origin_name);
+            info_container.className = "p-8 flex flex-col justify-center content-center mx-auto";
             //info_container.className = "flex";
             
             const container = document.createElement("div");
             container.append(image, info_container);
-            container.className = "rounded-xl bg-gray-700 my-4 overflow-hidden text-white";
+            container.className = "card rounded-xl bg-gray-700 my-4 overflow-hidden text-white w-11/12 max-w-xl mx-auto sm:flex sm:flex-row md:w-2/5 md:mx-8";
 
-            allItems.push(container); 
+            allItems.push(container);
         });
-        appNode.className = "flex flex-col";
-        appNode.append(...allItems);
+        const main_container = document.createElement("main");
+        main_container.append(...allItems);
+        main_container.className = "flex flex-col md:flex-row md:flex-wrap md:justify-center";
+        appNode.append(main_container);
     }
     catch(error){
         console.error(error);
     }
 }
 
-fetchData(baseUrl);
+const reload = () => {
+    document.querySelector("#app").removeChild(document.querySelector("main"));
+    fetchData(`${baseUrl}${random()}`);    
+}
+
+const reloadButton = document.querySelector("button");
+reloadButton.addEventListener("click", reload);
+
+fetchData(`${baseUrl}${random()}`);
