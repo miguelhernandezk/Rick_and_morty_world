@@ -5,6 +5,6 @@ module.exports = {
     src: '/_dist_',
   },
   buildOptions: {
-    baseUrl: '',
+    baseUrl: 'https://miguelhernandezk.github.io/Rick_and_morty_world/',
   },
 }
