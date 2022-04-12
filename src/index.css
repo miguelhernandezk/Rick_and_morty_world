@@ -8,13 +8,12 @@
 }
 
 .socialMediaContainer{
-    width: 30%;
+    width: 100%;
 }
 
 .myMediaList{
     display: flex;
     list-style-type: none;
-    flex-wrap: wrap;
 }
 
 a{
@@ -22,13 +21,13 @@ a{
 }
 
 .myMediaList a:hover{
-    color: rgb(233,69,117);
+    color: #F59E0B;
 }
 
 .aboutMeContainer{
-    width: 50%;
+    width: 100%;
 }
 
 .aboutMeContainer a:hover{
-    color: rgb(233,69,117);
+    color: #F59E0B;
 }
