@@ -4,13 +4,13 @@ const isIntersecting =  (entry) => {
 
 const loadImage = (entry) => {
     const container = entry.target;
-    const image = container.firstChild;
+    const image = container.firstChild; // Since first child is always an "img" tag, as set in "createImageNode" in index.js
     const url = image.dataset.src;
 
     //Load image
     image.src = url; 
 
-    observer.unobserve(container);
+    observer.unobserve(container); // Avoids reloading if image is already loaded
 }
 
 const observer = new IntersectionObserver((entries) => {

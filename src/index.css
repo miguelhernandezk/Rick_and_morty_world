@@ -2,6 +2,9 @@
 @import 'tailwindcss/dist/components.css';
 @import 'tailwindcss/dist/utilities.css';
 
+/*
+* CUSTOM CSS
+*/
 .centering-items{
     justify-content: center;
     align-items: center;
