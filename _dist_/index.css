@@ -5,13 +5,10 @@
 /*
 * CUSTOM CSS
 */
+
 .centering-items{
     justify-content: center;
     align-items: center;
-}
-
-.socialMediaContainer{
-    width: 100%;
 }
 
 .myMediaList{
@@ -27,9 +24,6 @@ a{
     color: #F59E0B;
 }
 
-.aboutMeContainer{
-    width: 100%;
-}
 
 .aboutMeContainer a:hover{
     color: #F59E0B;
