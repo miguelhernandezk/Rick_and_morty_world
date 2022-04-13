@@ -2,6 +2,9 @@
 @import "../_snowpack/pkg/tailwindcss/dist/components.css";
 @import "../_snowpack/pkg/tailwindcss/dist/utilities.css";
 
+/*
+* CUSTOM CSS
+*/
 .centering-items{
     justify-content: center;
     align-items: center;

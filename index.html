@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <!-- Load favicon from external url -->
     <link rel="icon" href="https://secureservercdn.net/198.71.233.72/1zs.736.myftpupload.com/wp-content/uploads/2021/12/miguelh-4-e1640394124740.png?time=1649440032" />
+    <!-- Load icons stylesheet from Fontawesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -10,11 +12,14 @@
       content="Web site created using create-snowpack-app"
     />
     <!--
+      For development purposes:
       Snowpack will replace https://miguelhernandezk.github.io/Rick_and_morty_world/ with the value you have for `baseUrl` in `snowpack.config.js`.
       Make sure to update it with your GitHub Page URL. https://<your-username>.github.io/<your-repo-name>
 
       More about config options:
       - https://www.snowpack.dev/reference/configuration#buildoptions.baseurl
+
+      This website was created using mainly Tailwind framework for CSS.
     -->
     <link
       rel="stylesheet"
@@ -24,6 +29,7 @@
     <title>The Rick and Morty world</title>
   </head>
   <body>
+    <!--Header section: No menu, just some links-->
     <header>
       <nav>
         <ul class="m-2 flex justify-between items-center">
@@ -43,6 +49,7 @@
       </h1>
     </header>
     <!--
+      For development purposes:
       This HTML file is a template.
 
       To begin the development, run `npm start` or `yarn start`.
@@ -60,7 +67,7 @@
         <button class="bg-yellow-500 p-3 rounded-md text-white my-4 hover:bg-yellow-600">
           See more schwifty characters
         </button>
-
+        <!--Anchor id for rendering app-->
         <div id="app"></div>
       </div>
     </div>
