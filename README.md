@@ -1,20 +1,35 @@
 # The Rick and Morty world.
-> 🙉 This is a portfolio project created using the [Rick and Morty API](https://rickandmortyapi.com/). 
+> 🙉 This is a portfolio project created using the [Rick and Morty API](https://rickandmortyapi.com/). You can find previus work on my profile. 
 
 <p align="center">
-<a href="https://www.instagram.com/miguelhmx/">
-  <img align="left" alt="Miguel's Instagram" width="22px" src="https://raw.githubusercontent.com/hussainweb/hussainweb/main/icons/instagram.png" />
+<a href="https://www.instagram.com/miguelhmx/" target="_blank">
+  <img alt="Miguel's Instagram" width="22px" src="https://raw.githubusercontent.com/hussainweb/hussainweb/main/icons/instagram.png" />
 </a>
-<a href="https://twitter.com/@miguelhmx">
+<a href="https://twitter.com/@miguelhmx" target="_blank">
   <img alt="Miguel Hernández | Twitter" width="22px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/twitter.svg" />
 </a>
-<a href="https://www.linkedin.com/in/miguelhmx/">
+<a href="https://www.linkedin.com/in/miguelhmx/" target="_blank">
   <img alt="Miguel's LinkedIN" width="22px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/linkedin.svg" />
 </a>
 
 [![Mike's GitHub stats](https://github-readme-stats.vercel.app/api?username=miguelhernandezk&show_icons=true)](https://github.com/miguelhernandezk/github-readme-stats)
 </p>
 
+
+# Features
+
+- [DOM Manipulation](#dom-manipulation)
+- [Asynchronous functions](#Asynchronous-functions)
+- [API Requests](#api-requests)
+- [Lazy Loading](#lazy-loading)
+- [Mobile First Design](#Mobile-first-design)
+
+
+## Dom Manipulation
+`DOM manipulation` is the main feature of this project. There is an `index.html` file which contains a few lines to start with. The rest is rendered on the screen using JavaScript and requesting info from the  Rick and Morty API.
+
+## Asynchronous functions
+⏱ Since we are requesting info from an API, we use asynchronous functions using async-await. The whole
 
 
 # Snowpack Tailwind
