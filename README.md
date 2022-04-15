@@ -1,7 +1,21 @@
 # The Rick and Morty world.
 > 🙉 This is a portfolio project created using the [Rick and Morty API](https://rickandmortyapi.com/). 
 
-[![Mike's GitHub stats](https://github-readme-stats.vercel.app/api?username=miguelhernandezk)](https://github.com/miguelhernandezk/github-readme-stats)
+<p align="center">
+<a href="https://www.instagram.com/miguelhmx/">
+  <img align="left" alt="Miguel's Instagram" width="22px" src="https://raw.githubusercontent.com/hussainweb/hussainweb/main/icons/instagram.png" />
+</a>
+<a href="https://twitter.com/@miguelhmx">
+  <img alt="Miguel Hernández | Twitter" width="22px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/twitter.svg" />
+</a>
+<a href="https://www.linkedin.com/in/miguelhmx/">
+  <img alt="Miguel's LinkedIN" width="22px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/linkedin.svg" />
+</a>
+
+[![Mike's GitHub stats](https://github-readme-stats.vercel.app/api?username=miguelhernandezk&show_icons=true)](https://github.com/miguelhernandezk/github-readme-stats)
+</p>
+
+
 
 # Snowpack Tailwind
 Hello
