@@ -45,12 +45,12 @@ When entering the site, JavaScript will request info from the Rick and Morty API
 
 Since the API is divided into different sections (or pages), we generate a random number to acces a different page from the API everytime you reload the site. This also allows different characters to be displayed every time you hit the "See more schwifty characters" button. 
 
-<img align="center" alt="Lazy loading" src="https://miguelhernandezmx.com/wp-content/uploads/2022/04/Lazy_loading_rick_and_morty.png"/>
+<img align="center" alt="Web page after rendering info" src="https://miguelhernandezmx.com/wp-content/uploads/2022/04/info_rendered_rick_and_morty.png"/>
 
 ## Lazy Loading
 I know, I know. This is not a complex web app. But this site is meant to show my skills. Lazy loading is usually implemented when we need to save mobile data. I used an intersection observer in order to know when the `img tag` enters the viewport. When this happens, the picture is loaded. 
 
-<img align="center" alt="Web page after rendering info" src="https://miguelhernandezmx.com/wp-content/uploads/2022/04/info_rendered_rick_and_morty.png"/>
+<img align="center" alt="Lazy loading" src="https://miguelhernandezmx.com/wp-content/uploads/2022/04/Lazy_loading_rick_and_morty.png"/>
 
 ## Mobile first design
 The site is responsive. By the time I'm writing this, I'm not a designer myself, but I tried to copy the original designs from the Rick and Morty API. So, yes. This project is responsive. This was achieved by using the Tailwind framework for CSS. 
