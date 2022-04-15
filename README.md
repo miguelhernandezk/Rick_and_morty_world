@@ -1,6 +1,8 @@
 # The Rick and Morty world.
 > 🙉 This is a portfolio project created using the [Rick and Morty API](https://rickandmortyapi.com/). You can find previus work on my profile. 
 
+You can see this project online by [clicking here](https://miguelhernandezk.github.io/Rick_and_morty_world/)
+
 <p align="center">
 <a href="https://www.instagram.com/miguelhmx/" target="_blank">
   <img alt="Miguel's Instagram" width="22px" src="https://raw.githubusercontent.com/hussainweb/hussainweb/main/icons/instagram.png" />
