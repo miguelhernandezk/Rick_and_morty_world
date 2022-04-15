@@ -1,3 +1,8 @@
+# The Rick and Morty world.
+> 🙉 This is a portfolio project created using the [Rick and Morty API](https://rickandmortyapi.com/). 
+
+[![Mike's GitHub stats](https://github-readme-stats.vercel.app/api?username=miguelhernandezk)](https://github.com/miguelhernandezk/github-readme-stats)
+
 # Snowpack Tailwind
 Hello
 > ✨ Bootstrapped with Create Snowpack App (CSA).
